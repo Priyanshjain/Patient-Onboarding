@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="ok">
+<h2 align="center" style="background-color: #52575d;"><b>Appointment History</b></h2> 
+<div class="row">
+    <div class="col-sm-4" align="center" *ngFor="let appointment of appointments">
+        <div class="card text-white bg-dark">
+            <div class="card-body">
+                <h3 class="card-title" style="color: #1f6feb;" align="center"><b>Appointment Details</b></h3> 
+                <hr> 
+                <div>
+                    <p class="card-text">  
+                        <!-- Appointment Token : {{appointment.appointmentToken}}  </p>   -->
+                        <p class="card-text">Patient Name : {{appointment.patientName}}  </p>
+                        <p class="card-text">Patient ID : {{appointment.patientId}}  </p>
+                        <p class="card-text">Appointment Data & Time : {{appointment.appointmentDateAndTime}}  </p>
+                        <p class="card-text">Doctor Name : {{appointment.doctor}}  </p>
+                        <p class="card-text">Phone Number : {{appointment.phoneNumber}}  </p>
+                        <p class="card-text">Reason : {{appointment.disease}}  </p>
+                        <hr>
+                        <p>Appointment Status</p>
+                        <button type="submit" class="btn btn-info" disabled>{{appointment.appointmentStatus}}</button>
+                    </div>
+                </div>  
+            </div>  
+        </div>
+    </div>
+    <div class = "container mt-3"> 
+    <button class = "btn btn-dark" (click) = "Back()">Back</button>
+</div>
+<br>
+</div>
+<app-footer></app-footer>
+

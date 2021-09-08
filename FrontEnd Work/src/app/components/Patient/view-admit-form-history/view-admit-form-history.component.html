@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+
+<div class="ok">
+<h2 align="center" style="background-color: #52575d;"><b>Admit History</b></h2> 
+
+<div class="row">
+    <div class="col-sm-4" align="center" *ngFor="let admit of admits">
+        <div class="card text-white bg-dark">
+            <div class="card-body">
+                <h3 class="card-title" style="color: #1f6feb;" align="center"><b>Admit Form Details</b></h3>
+                <hr>
+                <div>
+                    <p class="card-text">
+                        <!-- Appointment Token : {{appointment.appointmentToken}}  </p>   -->
+                    <p class="card-text">Patient Name : {{admit.patientName}} </p>
+                    <p class="card-text">Patient ID : {{admit.patientId}} </p>
+                    <p class="card-text">Admit Data & Time : {{admit.admitDateAndTime}} </p>
+                    <p class="card-text">Ward Details : {{admit.ward}} </p>
+                    <p class="card-text">Phone Number : {{admit.phoneNumber}} </p>
+                    <p class="card-text">Reason : {{admit.reason}} </p>
+                    <hr>
+                    <p>Admit Status</p>
+                    <button type="submit" class="btn btn-info" disabled>{{admit.admitStatus}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container mt-3">
+    <button class="btn btn-dark" (click)="Back()">Back</button>
+</div>
+
+<br>
+</div>
+<app-footer></app-footer>
+

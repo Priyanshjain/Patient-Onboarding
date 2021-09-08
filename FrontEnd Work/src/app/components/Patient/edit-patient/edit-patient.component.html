@@ -1,0 +1,97 @@
+<app-navbar></app-navbar><br>
+
+<div class="card shadow-lg p-3 mb-5 bg-white rounded " style="width: 40rem;">
+  <div class="card-header">
+    <h3><b>Patient Profile</b></h3>
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <form novalidate [formGroup]="patientEditForm" (ngSubmit)="updatePatient()">
+        <fieldset>
+          <div class="form-group">
+            <label>Patient ID</label>
+            <input type="number" class="form-control input" formControlName="patientId" required readonly>
+            <div class="alert alert-danger" *ngIf="patientEditForm.get('patientId').hasError('required') &&
+                   patientEditForm.get('patientId').dirty">
+              Email is Required
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Patient Name</label>
+            <input type="text" class="form-control input" formControlName="patientName" required [readonly]="readonly">
+            <div class="alert alert-danger" *ngIf="patientEditForm.get('patientName').hasError('required') &&
+                   patientEditForm.get('patientName').dirty">
+              Patient Name is Required
+            </div>
+            <div class="alert alert-danger" *ngIf="patientEditForm.get('patientName').hasError('minlength') &&
+                   patientEditForm.get('patientName').dirty">
+              Please enter a character above 5
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control input" formControlName="email" required readonly>
+            <div class="alert alert-danger" *ngIf="patientEditForm.get('email').hasError('required') &&
+                   patientEditForm.get('email').dirty">
+              Email is Required
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="number" class="form-control input" formControlName="phoneNumber" required
+              [readonly]="readonly">
+            <div class="alert alert-danger" *ngIf="patientEditForm.get('phoneNumber').hasError('required') &&
+                   patientEditForm.get('phoneNumber').dirty">
+              Phone Number is Required
+            </div>
+          </div>
+          <div class="form-check">
+            <input type="radio" id="html" name="gender" value="male" formControlName="gender">
+            <label for="html">Male</label><br>
+            <input type="radio" id="css" name="gender" value="female" formControlName="gender">
+            <label for="css">Female</label><br>
+            <input type="radio" id="javascript" name="gender" value="others" formControlName="gender">
+            <label for="javascript">Others</label>
+          </div>
+          <div *ngIf="patientEditForm.get('gender').hasError('required') &&
+        patientEditForm.get('gender').dirty" class=" alert alert-danger">
+            gender is required.
+          </div>
+          <br>
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" class="form-control" formControlName="patientAge" required [readonly]="readonly">
+            <div class="alert alert-danger" *ngIf="patientEditForm.get('patientAge').hasError('required') &&
+          patientEditForm.get('patientAge').dirty">
+              Age is Required
+            </div>
+          </div>
+          <div>
+            <label for="address">Address</label><br>
+            <textarea id="w3review" name="address" rows="4" cols="50" placeholder="Entre your address"
+              formControlName="address" [readonly]="readonly">
+          </textarea>
+          </div>
+          <div class="form-group">
+            <label>ID Proof</label>
+            <input type="text" class="form-control" formControlName="idProof" required [readonly]="readonly">
+            <div class="alert alert-danger" *ngIf="patientEditForm.get('idProof').hasError('required') &&
+        patientEditForm.get('idProof').dirty">
+              ID is Required
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary" *ngIf="details" (click)="readOnly()">Save</button>
+      </form>
+      <br>
+
+      <div>
+        <button class="btn btn-primary" (click)="show()">Edit</button> &nbsp;
+        <button class="btn btn-warning" (click)="forgetPassword()">Forget Password</button>&nbsp;
+        <button class="btn btn-dark" (click)="Back()">Back</button>&nbsp;<br><br>
+      </div>
+      <font color=green size = 5px>{{ successMsg }}</font>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

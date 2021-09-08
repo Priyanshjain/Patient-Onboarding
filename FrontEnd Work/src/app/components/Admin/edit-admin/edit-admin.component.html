@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <form novalidate [formGroup]="adminEditForm" (ngSubmit)="updateAdmin()">
+    <fieldset>
+      <div class="form-group">
+          <label>Id</label>
+        
+          <input type="number" class="form-control input" formControlName="adminId" required readonly>
+          <label>Admin Name</label>
+          <input type="text" class="form-control input" formControlName="adminName" required [readonly]="readonly">
+          <div class="alert alert-danger" *ngIf="adminEditForm.get('adminName').hasError('required') &&
+                   adminEditForm.get('adminName').dirty">
+            Admin Name is Required
+          </div>
+          <div class="alert alert-danger" *ngIf="adminEditForm.get('adminName').hasError('minlength') &&
+                   adminEditForm.get('adminName').dirty">
+            Please enter a character above 5
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control input" formControlName="email" required readonly>
+          <div class="alert alert-danger" *ngIf="adminEditForm.get('email').hasError('required') &&
+                   adminEditForm.get('email').dirty">
+            Email is Required
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="number" class="form-control input" formControlName="phone" required [readonly]="readonly">
+          <div class="alert alert-danger" *ngIf="adminEditForm.get('phone').hasError('required') &&
+                   adminEditForm.get('phone').dirty">
+            Phone is Required
+          </div>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="html" name="gender" value="male" formControlName="gender">
+          <label for="html">Male</label><br>
+          <input type="radio" id="css" name="gender" value="female" formControlName="gender">
+          <label for="css">Female</label><br>
+          <input type="radio" id="javascript" name="gender" value="others" formControlName="gender">
+          <label for="javascript">Others</label>
+        </div>
+        <div *ngIf="adminEditForm.get('gender').hasError('required') &&
+        adminEditForm.get('gender').dirty" class=" alert alert-danger">
+          gender is required.
+        </div>
+        <br>
+        <label for="address">Address</label><br>
+        <textarea id="w3review" name="address" rows="4" cols="50" placeholder="Entre your address"
+          formControlName="address">
+        </textarea>
+        <br>
+
+    </fieldset>
+    <button type="submit" class="btn btn-primary"  *ngIf="details" (click)="readOnly()">Save</button>
+  </form>
+  <br>
+  <div>
+    <button class="btn btn-primary"   (click)="show()">Edit</button>	&nbsp;	&nbsp;
+    <button class="btn btn-warning"  (click)="forgetPassword()">Forget Password</button>	&nbsp;	&nbsp;
+    <button class="btn btn-dark" (click)="Back()">Back</button><br>
+
+  </div>
+  <br>
+  <font color = red size = 5px>{{ errMessage }}</font>
+  <font color = green size = 5px>{{ SuccessMsg }}</font>
+</div>
+<app-footer></app-footer>

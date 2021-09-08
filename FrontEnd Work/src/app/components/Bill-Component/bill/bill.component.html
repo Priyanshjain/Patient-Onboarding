@@ -1,0 +1,84 @@
+<app-navbar></app-navbar>
+<div class="card shadow-lg p-3 mb-5 bg-white rounded ">
+  <div class="card-header">
+    <h3>Bill Generate </h3>
+  </div>
+  <div class="card-body">
+
+    <form novalidate [formGroup]="billGenerateForm" (ngSubmit)="generateBill()">
+      <fieldset>
+        <div class="form-group">
+          <label>Patient Id</label>
+          <input type="number" class="form-control input" formControlName="patientId" required>
+          <div class="alert alert-danger" *ngIf="billGenerateForm.get('patientId').hasError('required') &&
+                         billGenerateForm.get('patientId').dirty">
+            value is Required
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Medicine Price</label>
+          <input type="number" class="form-control input" formControlName="medicinePrice" required>
+          <div class="alert alert-danger" *ngIf="billGenerateForm.get('medicinePrice').hasError('required') &&
+                         billGenerateForm.get('medicinePrice').dirty">
+            value is Required
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Medicnes Quantity</label>
+          <input type="number" class="form-control input" formControlName="quantity" required>
+          <div class="alert alert-danger" *ngIf="billGenerateForm.get('quantity').hasError('required') &&
+                         billGenerateForm.get('quantity').dirty">
+            value is Required
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Surgery Cost</label>
+          <input type="number" class="form-control input" formControlName="surgeryCost" required>
+          <div class="alert alert-danger" *ngIf="billGenerateForm.get('surgeryCost').hasError('required') &&
+                         billGenerateForm.get('surgeryCost').dirty">
+            value is Required
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Appointment Cost</label>
+          <input type="number" class="form-control input" formControlName="appointmentCost" required>
+          <div class="alert alert-danger" *ngIf="billGenerateForm.get('appointmentCost').hasError('required') &&
+                         billGenerateForm.get('appointmentCost').dirty">
+            value is Required
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Doctor Fees</label>
+          <input type="number" class="form-control input" formControlName="doctorFees" required>
+          <div class="alert alert-danger" *ngIf="billGenerateForm.get('doctorFees').hasError('required') &&
+                         billGenerateForm.get('doctorFees').dirty">
+            value is Required
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Hospital Changers</label>
+          <input type="number" class="form-control input" formControlName="hospitalCharges" required>
+          <div class="alert alert-danger" *ngIf="billGenerateForm.get('hospitalCharges').hasError('required') &&
+                         billGenerateForm.get('hospitalCharges').dirty">
+            value is Required
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Other Chanrges</label>
+          <input type="number" class="form-control input" formControlName="otherCharges" required>
+          <div class="alert alert-danger" *ngIf="billGenerateForm.get('otherCharges').hasError('required') &&
+                         billGenerateForm.get('otherCharges').dirty">
+            value is Required
+          </div>
+        </div>
+
+
+      </fieldset>
+      <button type="submit" class="btn btn-primary btn-sm" [disabled]="!billGenerateForm.valid">Send Bill</button>
+      &nbsp;
+      <button type="reset" class="btn btn-danger btn-sm ml-2">Reset</button> &nbsp;
+      <button class="btn btn-dark btn-sm ml-2" (click)="Back()">Back</button>
+    </form>
+  </div>
+  <app-footer></app-footer>
+</div>

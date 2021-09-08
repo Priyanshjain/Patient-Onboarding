@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Piedra&family=Tenali+Ramakrishna&display=swap");
+
+.box {
+  width: 100%;
+  margin: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid green;
+  border-radius: 20px;
+}
+.box input {
+  width: 75%;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 25px;
+  padding: 5px 10px;
+  padding-right: 0px;
+  margin: 10px 5px;
+  font-family: "Tenali Ramakrishna", sans-serif;
+}
+
+.box i {
+  width: 25px;
+  text-align: center;
+}
+
+fieldset {
+  background-color: #eeeeee;
+  display: block;
+  margin-left: 180px;
+  margin-right: 420px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  width: 75%;
+  border: 2px solid green;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.main {
+  background-color: lightsteelblue;
+}
+
+legend {
+  background-color: lightsteelblue;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 0px;
+  margin-left: 16px;
+}
+
+label {
+  font-size: 25px;
+  width: auto;
+}
+
+input {
+  margin: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.btn-text-center {
+  text-align: center;
+}
+
+.container {
+  width: 75%;
+}

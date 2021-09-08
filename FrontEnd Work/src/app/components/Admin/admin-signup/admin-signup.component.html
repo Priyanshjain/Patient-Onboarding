@@ -1,0 +1,100 @@
+<app-navbar></app-navbar>
+
+<div class="main">
+  <br>
+  <h1 style="color:black"><b>Admin SignUp Page</b></h1>
+  <div class="container">
+    <form novalidate [formGroup]="adminSignUpForm" (ngSubmit)="saveAdmin()">
+      <fieldset>
+        <div class="form-group">
+          <label>Admin Name</label>
+          <input type="text" class="form-control input" formControlName="adminName" required>
+          <div class="alert alert-danger" *ngIf="adminSignUpForm.get('adminName').hasError('required') &&
+                   adminSignUpForm.get('adminName').dirty">
+            Admin Name is Required
+          </div>
+          <div class="alert alert-danger" *ngIf="adminSignUpForm.get('adminName').hasError('minlength') &&
+                   adminSignUpForm.get('adminName').dirty">
+            Please enter a character above 5
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control input" id="password" formControlName="password"
+            [(ngModel)]="password" required>
+        </div>
+
+        <div class="form-group">
+          <label>Confirm-Password</label>
+          <input type="password" class="form-control input" id="confirm_password" formControlName="confirm_password"
+            [(ngModel)]="confirm_password" required>
+        </div>
+        <div class="alert alert-danger" *ngIf="passwordMatch(password ,confirm_password)">
+          Password does't match
+        </div>
+
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control input" formControlName="email" required>
+          <div class="alert alert-danger" *ngIf="adminSignUpForm.get('email').hasError('required') &&
+                   adminSignUpForm.get('email').dirty">
+            Email is Required
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="number" class="form-control input" formControlName="phoneNumber" required>
+          <div class="alert alert-danger" *ngIf="adminSignUpForm.get('phoneNumber').hasError('required') &&
+                   adminSignUpForm.get('phoneNumber').dirty">
+            Phone Number is Required
+          </div>
+        </div>
+
+        <div class="form-check">
+          <input type="radio" id="html" name="gender" value="male" formControlName="gender">
+          <label for="html">Male</label><br>
+          <input type="radio" id="css" name="gender" value="female" formControlName="gender">
+          <label for="css">Female</label><br>
+          <input type="radio" id="javascript" name="gender" value="others" formControlName="gender">
+          <label for="javascript">Others</label>
+        </div>
+
+        <div *ngIf="adminSignUpForm.get('gender').hasError('required') &&
+      adminSignUpForm.get('gender').dirty" class=" alert alert-danger">
+          Gender is required.
+        </div>
+        <br>
+        <div class="form-group">
+          <label>Age</label>
+          <input type="number" class="form-control" formControlName="age" required>
+          <div class="alert alert-danger" *ngIf="adminSignUpForm.get('age').hasError('required') &&
+        adminSignUpForm.get('age').dirty">
+            Age is Required
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="address">Address</label><br>
+          <textarea id="w3review" name="address" rows="4" cols="50" placeholder="Entre your address"
+            formControlName="address">
+        </textarea>
+        </div>
+        <br>
+        <button type="submit" [disabled]="!adminSignUpForm.valid" class="btn btn-success">Submit</button>&nbsp;
+        <button class="btn btn-primary" id="login" (click)="login()">Login</button><br><br>
+        <button class="btn btn-dark" (click)="dashboard()">Back</button>
+      </fieldset>
+
+    </form>
+<!-- <font color=red>{{ errorMessage }} </font> -->
+<font color=green size = 5px>{{ successMessage }}</font>
+  </div>
+  <br>
+
+  <!-- *ngIf = "Id == -1 ? notdisplay:displayButton" -->
+
+
+  <app-footer></app-footer>
+</div>

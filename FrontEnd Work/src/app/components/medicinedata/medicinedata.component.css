@@ -1,0 +1,51 @@
+.course-item .course-thumb .price {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  background: #d82a4e;
+  display: inline-block;
+  padding: 13px 19px;
+  margin: 14px;
+}
+.course-meta-area .price-btn {
+  padding: 20px 30px;
+  background: #474747;
+  margin-right: 10px;
+}
+
+table.table2 {
+  border-radius: 25px;
+  background: white;
+  padding: 20px;
+  width: 1300px;
+  height: 50px;
+  margin-left: 7%;
+  float: center;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+table.table2 th {
+  font-size: 20px;
+  float: left;
+}
+table.table2 input {
+  border-radius: 25px;
+  display: inline-block;
+}
+table.table2 label {
+  font-size: 25px;
+  color: rgb(7, 7, 7);
+}
+
+.main {
+  background-color: lightsteelblue;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+table.table2 td {
+  text-align: center;
+}

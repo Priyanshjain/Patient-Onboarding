@@ -1,0 +1,47 @@
+
+<app-navbar></app-navbar>
+<!-- <font color = green>{{ successMessage }}</font> -->
+<font color = red size = 5px> {{errorMessage}}</font>
+<div class="main">
+    <br><h1 style="color:black"><b>Patient Login Form</b></h1><br><br>
+    <div class="container">
+        <form novalidate [formGroup]="patientLoginForm" (ngSubmit)="patientLogin()">
+            <fieldset>
+                    <label style="color:black"><b>Login Id :</b></label>
+                    
+                    <div class="box">
+                        <i class="fa fa-user fa-lg"></i>
+                        <input type="number" name="patientId" id="patientId" placeholder="Entre Your id" formControlName="patientId">
+                        <div class="alert alert-danger" *ngIf="patientLoginForm.get('patientId').hasError('required') &&
+                       patientLoginForm.get('patientId').dirty">
+                            Patient ID is Required
+                        </div>
+                        <!-- <hr> -->
+                    </div><br>
+                    
+                    <label style="color:black"><b>Password :</b></label>
+                    
+                    <div class="box">
+                        <i class="fa fa-key"></i>
+                        <input type="password" name="password" id="password" placeholder="Entre Your Password" formControlName="password">
+                        <div class="alert alert-danger" *ngIf="patientLoginForm.get('password').hasError('required') && patientLoginForm.get('password').dirty">
+                            Password is Required
+                        </div>
+                    </div>
+                    <div class="btn-text-center">
+                        <button type="submit" class="btn btn-primary" [disabled]="!patientLoginForm.valid" (click) = "patientLogin()">Log-in</button> &nbsp;
+                            <button class="btn btn-warning" (click) = "sign_up()">Sign-Up</button> &nbsp;
+                            <button class="btn btn-danger" (click) = "forgetPassword()">Forget Password</button>&nbsp;
+                            <br><br>
+                            
+                            <button class="btn btn-dark" (click) = "back()">Back</button>&nbsp;
+                    </div>
+            </fieldset>
+            <br>
+            
+        </form>
+    </div>
+    </div>
+    <app-footer></app-footer>
+
+

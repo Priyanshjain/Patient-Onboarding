@@ -1,0 +1,234 @@
+<header class="header">
+    <nav class="navbar navbar-expand-lg" style="background-color: #0d1117;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"
+            style="color: white">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#"><i class="fa fa-ravelry fa-lg" aria-hidden="true"
+                    style="color:#07be94;;">&nbsp;<b>Insane</b></i></a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                <li class="nav-item active"><a class="nav-link" (click)="home()" style="color: white;"><b>Home</b></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#mission-container" style="color: white;"><b>DEPARTMENTS
+                            & SERVICES</b></a></li>
+                <li class="nav-item"><a class="nav-link" (click)="covidData()" style="color: white;"><b>Covid-19
+                            DashBoard</b></a></li>
+                <li class="nav-item"><a class="nav-link" (click)="contactUs()" style="color: white;"><b>Contact Us
+                        </b></a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" style="color: white;"><b>Feedback</b></a></li>
+                <li class="nav-item"><a class="nav-link admin" (click)="adminLogin()"
+                        style="color: white;"><b>Admin*</b></a></li>
+                <li class="nav-item"><a class="nav-link" (click)="login()" style="color: white;"><b>Login/SignUp</b></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <i class="fa fa-search w3-hover-opacity fa-2x" style="color: white;"></i> &nbsp;
+            </form>
+
+        </div>
+    </nav>
+</header>
+<!-- <app-admin-signup></app-admin-signup> -->
+<!-- <app-patient-signup></app-patient-signup> -->
+<!-- <app-patient-login></app-patient-login> -->
+<!-- <app-admin-login></app-admin-login> -->
+
+
+<!-- <button class="btn btn-outline-danger me-2 right" type="submit">Search</button> -->
+<div class="ok">
+    <section id="home">
+        <h1 class="h-primary"><b>Welcome to CritiCare Hospital</b></h1>
+        <b>
+            <p style="font-family: Alegreya; font-style: italic;">Criticare Multi specialty Hospital is a name
+                synonymous with
+                quality Health
+                care by professional doctors for over two decades now and is located in the western suburb of Mumbai –
+                Andheri. The hospital was a dream child of Dr. Tufail Ahmed, Cardiologist & Chest Physician. The
+                foundation of this hospital is laid on the values of providing world-class qualitative medical amenities
+                to people with a humane touch. </p>
+        </b>
+    </section>
+    <section class="services-container">
+        <h1 class="h-primary center"><b>Our Services</b></h1>
+        <div id="services">
+            <div class="box">
+                <!-- <img src="img1/food2.jpg" alt=""> -->
+                <h2 class="h-secondry center"><b>Admit Room Facilities</b></h2>
+                <div align="center">
+                    <div class="circular">
+                        <div class="inner"></div>
+                        <div class="number">85%</div>
+                        <div class="circle">
+                            <div class="bar left">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="bar right">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <b>
+                    <p class="centre">Our institute is fully equipped with the latest patient friendly diagnostic units,
+                        including the CT scan, Ultrasound and Doppler and X-ray units to mention a few. Conventional
+                        radiology (X-ray unit) located in the basement of “A-wing”, constitutes a digital imaging unit
+                        comprising of a CR – (Computerized Radiography) complete with portable and in department
+                        facilities.</p>
+                </b>
+
+            </div>
+            <div class="box">
+                <!-- <img src="img1/food3.jpg" alt=""> -->
+                <h2 class="h-secondry center"><b>Diagnostic Services</b></h2>
+                <div align="center">
+                    <div class="circular">
+                        <div class="inner"></div>
+                        <div class="number">90%</div>
+                        <div class="circle">
+                            <div class="bar left">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="bar right">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <b>
+                    <p class="centre">Laboratory is well equipped with all latest instruments & trained qualified staff.
+                        All pathological test performed by Fully automated Vitros 250 Biochemistry analyzer, Sysmex
+                        Hemato Logical cell counter, Nycocard , Eoogulometer, ABG Bayer analyzer. We are providing Free
+                        Home visits with 24 hours emergency services for essentially ill patients.</p>
+                </b>
+            </div>
+            <div class="box">
+                <!-- <img src="img1/pizza.jpg" alt=""> -->
+                <h2 class="h-secondry center"><b>Healthcare Plan</b></h2>
+                <div align="center">
+                    <div class="circular">
+                        <div class="inner"></div>
+                        <div class="number">95%</div>
+                        <div class="circle">
+                            <div class="bar left">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="bar right">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <b>
+                    <p class="centre">Criticare Multispeciality Hospital & Research Centre had been setup almost two
+                        decade back with aim to provide quality healthcare to the people. This ultramodern,
+                        multi-speciality care hospital has a spectrum of services from diagnostic to therapeutic, from
+                        prevention to rehabilitation under one roof.</p>
+                </b>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-container" id="mission-container">
+        <h1 class="h-primary center"><b>Our Mission</b></h1>
+        <div id="services">
+            <div class="box">
+                <!-- <img src="img1/food3.jpg" alt=""> -->
+                <h2 class="h-secondry center"><b>Emergency Facilities</b></h2>
+                <img src="../../../assets/img/hospital/3.jpg"><br>
+                <b>
+                    <p class="centre">Emergency department (Casualty) at Criti Care Hospital is a State-of-the-art unit
+                        comprising of highly skilled and efficient team of specialists, emergency doctors and well
+                        trained nursing staff equipped to respond to patients who need immediate and prompt medical care
+                        in all sorts of emergencies. This is a round-the-clock service with 24x7 accesses to modern
+                        operation theatres, a 24-hour pharmacy, imaging services and stat laboratory services assisting
+                        in immediate and accurate diagnosis for immediate treatment of the patient's condition.</p>
+                </b>
+                <button type="button" class="btn btn-danger">
+                    <a (click)="login()">Admit Form</a>
+                </button>
+            </div>
+            <div class="box">
+                <!-- <img src="img1/food2.jpg" alt=""> -->
+                <h2 class="h-secondry center"><b>Easy Appointment</b></h2>
+                <img src="../../../assets/img/hospital/1.jfif"><br>
+                <b>
+                    <p class="centre">Book Doctor Appointment Online. 1 Lakh+ verified trusted doctors across 20+
+                        specialities. Avoid waiting, Meet your doctor in 15 mins. Book Apointment Now. Instant
+                        Appointments. Free & Reliable. Verified Doctors. Get Checkups Done.You can register and get an
+                        appointment online for the government hospitals. Users can get an OPD appointment, lab reports
+                        and check blood availability.</p>
+                </b>
+                <button type="button" class="btn btn-danger">
+                    <a (click)="login()">Book Appointment</a>
+                </button>
+            </div>
+
+            <div class="box">
+                <!-- <img src="img1/pizza.jpg" alt=""> -->
+                <h2 class="h-secondry center"><b>Medicines Details</b></h2>
+                <img src="../../../assets/img/hospital/4.jfif"><br>
+                <b>
+                    <p class="centre">For over 32 years, Apollo Pharmacy has been providing you with genuine medicines
+                        round-the-clock, through 24-hour pharmacies. And now through Apollo Pharmacy, we intend to make
+                        your lives easier – by getting your medicines delivered to you. Yes, no more stepping out to get
+                        your medicines, no more standing in long queues, no more worrying about the genuineness of
+                        medicines, no more sweat! Here are more reasons why you should buy your medicines from Criti
+                        Care</p>
+                </b>
+                <button type="button" class="btn btn-danger">
+                    <a (click)="medicines()">Buy Medicines</a>
+                </button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section id="contact">
+    <h2 class="h-primary center" style="color: black;"><b>Feedback Form</b></h2>
+    <div id="contact-box">
+        <form action="">
+            <div class="form-group">
+                <label for="name">Name:- </label>
+                <input type="text" id="name" placeholder="Entre your name">
+            </div>
+            <hr>
+            <div class="form-group">
+                <label for="phone-no">Phone:- </label>
+                <input type="text" id="phone-no" placeholder="Entre your phone-no">
+            </div>
+            <hr>
+
+            <div class="form-group">
+                <label for="gmail">Gmail:- </label>
+                <input type="text" id="gmail" placeholder="Entre your gmail">
+            </div>
+            <hr>
+
+            <div class="form-group">
+                <label for="address">Address:- </label>
+                <input type="text" id="address" placeholder="Entre your address">
+            </div>
+            <hr>
+            <div class="form-group">
+                <label for="massage">Masseage:- </label>
+                <input type="text" id="massage" placeholder="Message">
+            </div>
+            <div align="center">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+<app-footer></app-footer>
+
+<!-- <app-admin-signup></app-admin-signup>
+<app-patient-signup></app-patient-signup>-->
+<!-- <app-patient-login></app-patient-login>  -->
+<!-- <app-admin-login></app-admin-login>  -->
+<!-- <app-doctors></app-doctors> -->

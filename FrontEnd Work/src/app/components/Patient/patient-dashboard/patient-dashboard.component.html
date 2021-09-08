@@ -1,0 +1,125 @@
+<app-navbar></app-navbar>
+<div class="ok">
+    <h2 align="center" style="background-color: #52575d; color: white; font-size: xx-large; font-family: Open Sans;"><b>
+            <marquee>Patient Dashboard</marquee>
+        </b></h2>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card text-white bg-dark">
+                <div class="card-body" align="center">
+                    <h4 class="card-title" align="center"><b>Book Appointment</b></h4>
+                    <p align="center"><i class="fa fa-calendar-plus-o fa-5x" aria-hidden="true"></i></p>
+                    <p class="card-text">With supporting text below as a natural
+                        lead-in to additional content.</p>
+                    <button type="submit" class="btn btn-info mb-2">
+                        <a (click)="appointmentForm()">Book Appointment</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card text-white bg-dark">
+                <div class="card-body" align="center">
+                    <h4 class="card-title" align="center"><b>Admit Form</b></h4>
+                    <p align="center"><i class="fa fa-plus-square fa-5x" aria-hidden="true"></i></p>
+                    <p class="card-text">With supporting text below as a natural
+                        lead-in to additional content.</p>
+                    <button type="button" class="btn btn-light">
+                        <a (click)="admitForm()">Admit</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card text-white bg-dark">
+                <div class="card-body" align="center">
+                    <h4 class="card-title" align="center"><b>Profile</b></h4>
+                    <p align="center"><i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i></p>
+                    <p class="card-text">With supporting text below as a natural
+                        lead-in to additional content.</p>
+                    <button type="submit" class="btn btn-warning">
+                        <a (click)="editForm()">Profile</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card text-white bg-dark">
+                <div class="card-body" align="center">
+                    <h4 class="card-title" align="center"><b>View Reports</b></h4>
+                    <p align="center"><i class="fa fa-id-card-o fa-5x" aria-hidden="true"></i></p>
+                    <p class="card-text">With supporting text below as a natural
+                        lead-in to additional content.</p>
+                    <button type="submit" class="btn btn-info mb-2">
+                        <a (click)="reports()">View Reports</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card text-white bg-dark">
+                <div class="card-body" align="center">
+                    <h4 class="card-title" align="center"><b>View Bill</b></h4>
+                    <p align="center"><i class="fa fa-money fa-5x" aria-hidden="true"></i></p>
+                    <p class="card-text">With supporting text below as a natural
+                        lead-in to additional content.</p>
+                    <button type="button" class="btn btn-light">
+                        <a (click)="patientBill()">View Bill</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card text-white bg-dark">
+                <div class="card-body" align="center">
+                    <h4 class="card-title" align="center"><b>View Medicine</b></h4>
+                    <p align="center"><i class="fa fa-medkit fa-5x" aria-hidden="true"></i></p>
+                    <p class="card-text">With supporting text below as a natural
+                        lead-in to additional content.</p>
+                    <button type="submit" class="btn btn-warning mb-2">
+                        <a (click)="medicines()">View Medicine</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card text-white bg-dark">
+                <div class="card-body" align="center">
+                    <h4 class="card-title" align="center"><b>View Appointment History</b></h4>
+                    <p align="center"><i class="fa fa-info-circle fa-5x" aria-hidden="true"></i></p>
+                    <p class="card-text">With supporting text below as a natural
+                        lead-in to additional content.</p>
+                    <button type="submit" class="btn btn-info mb-2">
+                        <a (click)="appointment()">View History</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card text-white bg-dark">
+                <div class="card-body" align="center">
+                    <h4 class="card-title" align="center"><b>View Admit History</b></h4>
+                    <p align="center"><i class="fa fa-address-card-o fa-5x" aria-hidden="true"></i></p>
+                    <p class="card-text">With supporting text below as a natural
+                        lead-in to additional content.</p>
+                    <button type="button" class="btn btn-light">
+                        <a (click)="admit()">View History</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+
+<app-footer></app-footer>

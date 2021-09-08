@@ -1,0 +1,45 @@
+fieldset {
+  background-color: #eeeeee;
+  display: block;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  max-width: 1000px;
+  padding: 16px;
+  border: 2px solid green;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.main {
+  background-color: lightsteelblue;
+}
+
+legend {
+  background-color: lightsteelblue;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 0px;
+  margin-left: 16px;
+}
+
+label {
+  font-size: 25px;
+  width: auto;
+}
+
+input {
+  margin: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.btn-text-center {
+  text-align: center;
+}

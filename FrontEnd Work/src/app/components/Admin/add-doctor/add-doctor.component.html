@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+
+
+ 
+<div class="container">
+    <form novalidate [formGroup]="addDoctorForm" (ngSubmit)="addDoctor()">
+      <fieldset>
+        <div class="form-group">
+          <label>Doctor Name :</label>
+          <input type="text" class="form-control" formControlName="doctorName" required>
+          <div class="alert alert-danger" *ngIf="addDoctorForm.get('doctorName').hasError('required') &&
+          addDoctorForm.get('doctorName').dirty">
+            Doctor Name is Required
+          </div>
+          <div class="alert alert-danger" *ngIf="addDoctorForm.get('doctorName').hasError('minlength') &&
+          addDoctorForm.get('doctorName').dirty">
+            Enter atleast 5 characters
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label>Department :</label>
+          <input type="text" class="form-control" formControlName="department" required>
+          <div class="alert alert-danger" *ngIf="addDoctorForm.get('department').hasError('required') &&
+          addDoctorForm.get('department').dirty">
+            Department is Required
+          </div>
+          <div class="alert alert-danger" *ngIf="addDoctorForm.get('department').hasError('minlength') &&
+          addDoctorForm.get('department').dirty">
+          Enter atleast 5 characters
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Qualification</label>
+          <input type="text" class="form-control" formControlName="qualification" required>
+          <div class="alert alert-danger" *ngIf="addDoctorForm.get('qualification').hasError('required') &&
+          addDoctorForm.get('qualification').dirty">
+            Qualification is Required
+          </div>
+          <div class="alert alert-danger" *ngIf="addDoctorForm.get('qualification').hasError('minlength') &&
+          addDoctorForm.get('qualification').dirty">
+          Enter atleast 5 characters
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Expertise :</label>
+          <input type="text" class="form-control" formControlName="expertise" required>
+          <div class="alert alert-danger" *ngIf="addDoctorForm.get('expertise').hasError('required') &&
+          addDoctorForm.get('expertise').dirty">
+            Expertise is Required
+          </div>
+          <div class="alert alert-danger" *ngIf="addDoctorForm.get('expertise').hasError('minlength') &&
+          addDoctorForm.get('expertise').dirty">
+          Enter atleast 5 characters
+          </div>
+        </div>
+        
+    
+      </fieldset><br>
+      <button type="submit" class="btn btn-primary">Submit</button>&nbsp;	&nbsp;
+      <button class="btn btn-dark" (click) = "Back()">Back</button><br><br>
+      <font color=green size = 5px>{{ successMessage }}</font>
+      <font color=green size = 5px>{{ errorMessage }}</font>
+
+    </form>
+  
+  </div>
+  
+  <app-footer></app-footer>
+
+
+

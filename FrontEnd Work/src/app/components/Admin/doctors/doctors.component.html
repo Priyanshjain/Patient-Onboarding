@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class="ok">
+    <br>
+    <div class="container">
+        <button class="btn btn-primary" (click)="addDoctor()">Add Doctor</button> &nbsp; &nbsp;
+        <button class="btn btn-dark" (click)="Back()">Back</button>
+    </div>
+    <div class="container" *ngFor="let doc of doctors">
+        <!-- <hr> -->
+        <div>
+            <i class="fa fa-user-md logo fa-5x" aria-hidden="true"></i>
+        </div>
+        <div>
+            <div class="name">
+                <h1>{{doc.doctorName}}</h1>
+            </div>
+            <div class="department">
+                <h2><i><b> {{doc.department}}</b></i> </h2>
+            </div>
+            <div class="qualification">
+                <h4><b><i> {{doc.qualification}} </i></b></h4>
+            </div>
+            <div class="expertise">
+                <h4> {{doc.expertise}} </h4>
+            </div>
+            <button class="btn btn-warning" (click)="appointment()">Make An Appointment</button> &nbsp;
+            <button class="btn btn-danger" (click)="deleteDoctor(doc.doctorId)">Delete</button>
+
+        </div>
+
+        <hr>
+    </div>
+    <br>
+    <app-footer></app-footer>
+</div>

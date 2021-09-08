@@ -1,0 +1,109 @@
+#contact {
+  position: relative;
+  /* z-index: -1; */
+  /* background-color: rgb(197, 235, 127); */
+}
+#contact::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  z-index: -1;
+  /* background: url("E:/Revature/project2/Project 2 final/Project 2 Work final/Patient-onbording final/Patient_OnBoarding/src/app/images/contact.jpg") no-repeat center center/cover; */
+}
+
+#contact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+#contact-box input,
+#contact-box textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+#contact-box form {
+  width: 40%;
+}
+#contact-box label {
+  font-size: 1.3rem;
+}
+
+footer {
+  background-color: #0d1117;
+  color: blanchedalmond;
+  padding: 0px 20px;
+  font-size: 17px;
+}
+
+/* utility class */
+.h-primary {
+  padding: 15px;
+  font-family: "Bree Serif", serif;
+  font-size: 3rem;
+  text-align: center;
+}
+.h-secondry {
+  color: black;
+  font-size: 2rem;
+  padding: 15px;
+  text-align: center;
+  font-family: "Bree Serif", serif;
+}
+.btn {
+  padding: 6px 15px;
+  border: 2px solid white;
+  background-color: brown;
+  color: white;
+  padding: 12px 15px;
+  font-size: 1.5rem;
+  font-family: "Bree Serif", serif;
+  border-radius: 20px;
+}
+
+.center {
+  padding: 15px;
+  /* font-size: 3rem; */
+  text-align: center;
+  font-family: "Baloo Bhai 2", cursive;
+  text-decoration: underline;
+}
+
+.form-group input {
+  text-align: center;
+  background: none;
+  border: none;
+  border-radius: 25px;
+}
+.form-group textarea {
+  background: none;
+  border: none;
+  border-radius: 25px;
+}
+
+/* #clients{
+    flex-wrap: wrap;
+}
+#clients img{
+width: 40px;
+height: auto;
+display: block;
+} */
+
+#contact_us {
+  background-color: rgb(18, 14, 24);
+}
+.head .body {
+  color: white;
+}
+.hover:hover {
+  background-color: rgb(58, 56, 56);
+}
+
+.hover {
+  text-align: center;
+}

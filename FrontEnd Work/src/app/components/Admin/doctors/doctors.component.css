@@ -1,0 +1,17 @@
+.ok {
+  background-color: lightsteelblue;
+}
+.container {
+  /* border:2px solid black; */
+  display: flex;
+  background-image: linear-gradient(
+    to right,
+    rgb(59, 199, 24),
+    rgb(0, 255, 187)
+  );
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.logo {
+  padding: 20px;
+}

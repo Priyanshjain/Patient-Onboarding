@@ -1,0 +1,118 @@
+<app-navbar></app-navbar>
+
+<font color=red size = 5px>{{ errorMessage }}</font>
+      <font color=green size = 5px>{{ successMessage }}</font>
+<div class="main">
+  <br>
+  <h1 style="color:black"><b>Making an Appointment</b></h1>
+  <div class="container">
+    <form novalidate [formGroup]="appointmentForm" (ngSubmit)="sendAppointment()">
+      <fieldset>
+        <div class="form-group"><br>
+          <label><b>Patient Id </b></label>
+          <input type="number" class="form-control" formControlName="patientId" required readonly>
+
+          <div class="alert alert-danger" *ngIf="appointmentForm.get('patientId').hasError('required') &&
+                   appointmentForm.get('patientId').dirty">
+            Patient ID is Required
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Patient Name : </label>
+          <input type="text" class="form-control" formControlName="patientName" required>
+          <div class="alert alert-danger"
+            *ngIf="appointmentForm.get('patientName').hasError('required') && appointmentForm.get('patientName').dirty">
+            Patient Name is Required
+          </div>
+        </div><br>
+
+        <div class="form-group">
+          <label for="gender" class="mr-sm-2">Gender : </label>
+
+          <input type="radio" name="gender" id="male" value="male" formControlName="gender" required />Male
+          <input type="radio" name="gender" id="female" value="female" formControlName="gender" required />Female
+          <input type="radio" name="gender" id="trans" value="trans" formControlName="gender" required />Trans
+
+        </div><br>
+
+        <div class="form-group">
+          <label>Mobile Number :</label>
+          <input type="text" class="form-control" formControlName="phoneNumber" required>
+          <div class="alert alert-danger"
+            *ngIf="appointmentForm.get('phoneNumber').hasError('required') && appointmentForm.get('phoneNumber').dirty">
+            Mobile Number is Required
+          </div>
+        </div><br>
+
+        <div class="form-group">
+          <label><b>Email</b></label>
+          <input type="email" class="form-control" formControlName="email" required>
+          <div class="alert alert-danger"
+            *ngIf="appointmentForm.get('email').hasError('required') && appointmentForm.get('email').dirty">
+            Email is Required
+          </div>
+        </div><br>
+
+        <div class="form-group">
+          <label>Address :</label>
+          <input type="text" class="form-control" formControlName="address" required>
+          <div class="alert alert-danger"
+            *ngIf="appointmentForm.get('address').hasError('required') && appointmentForm.get('address').dirty">
+            Address is Required
+          </div>
+          <div class="alert alert-danger"
+            *ngIf="appointmentForm.get('address').hasError('minlength') && appointmentForm.get('address').dirty">
+            Please enter a character above 5
+          </div>
+        </div><br>
+
+        <div class="form-group">
+          <label for="disease" class="mr-sm-2">Diseases : </label>
+          <p>Select which appointment type you require</p>
+          <select formControlName="disease" id="disease">
+            <option selected="selected">Body Checkup</option>
+            <option>General checkup</option>
+            <option>Cervix checkup</option>
+            <option>Heart checkup</option>
+            <option>Eye checkup</option>
+            <option>Robotic Surgery</option>
+            <option>Dental checkup</option>
+            <option>Hearing Test</option>
+            <option>Psycharity</option>
+            <option>Cancer</option>
+          </select>
+        </div><br>
+
+        <div class="form-group">
+          <label for="doctor" class="mr-sm-2">Doctor : </label><br>
+
+          <select formControlName="doctor">
+            <option value="Dr. Ketan Shinde" disabled>Choose a Doctor</option>
+            <option [ngValue]="doc.doctorName" *ngFor="let doc of doctors">{{doc.doctorName}}</option>
+          </select>
+
+        </div><br>
+
+        <div class="form-group">
+          <label>Appointment Date & Time :</label>
+          <input type="datetime-local" class="form-control" formControlName="appointmentDateAndTime" required>
+        </div><br>
+
+        <div class="form-group">
+          <label>Message :</label>
+          <input type="text" class="form-control" formControlName="message">
+        </div><br>
+        <div class="btn-text-center">
+          <button type="submit" [disabled]="!appointmentForm.valid" class="btn btn-primary">Send Appointment</button>
+          &nbsp;
+          &nbsp;
+          <button class="btn btn-dark" (click)="Back()">Back</button>
+        </div>
+      </fieldset>
+      <br>
+
+    </form>
+
+  </div>
+  <app-footer></app-footer>
+</div>

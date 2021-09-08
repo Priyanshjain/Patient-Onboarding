@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<div class="table-responsive" >
+    <!-- <font color="red">{{errorMessage}}</font>
+    <font color=green>{{ successMessage }}</font> -->
+    
+      <table border="5" BORDERCOLOR=white align="center" cellpadding="10"
+        cellspacing="10" class="table text-white bg-dark">
+        <thead class="thead text-dark"style="background-color: lightsteelblue;" >
+      <tr >
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+      </tr>
+      </thead>
+      <tr *ngFor="let bill of bills">
+        <td>
+            <p>Bill No </p>
+            <p>Patient Id</p>
+            <p>Medicines</p>
+            <p>Surgery Cost</p>
+            <p>Appointment Cost</p>
+            <p>Doctor Fees</p>
+            <p>Hospital Charges</p>
+            <p>Other Charges</p>
+        </td>
+        <td>
+            <p>--</p>
+            <p>--</p>
+            <p>{{bill.quantity}}</p>
+            <p>--</p>
+            <p>--</p>
+            <p>--</p> 
+            <p>--</p> 
+            <p>--</p> 
+        </td>
+        <td  >
+            <p>{{bill.billNo}}</p>
+            <p>{{bill.patientId}}</p>
+            <p>{{bill.medicinePrice}}/-</p>
+            <p>{{bill.surgeryCost}}/-</p>
+            <p>{{bill.appointmentCost}}/-</p>
+            <p>{{bill.doctorFees}}/-</p>
+            <p>{{bill.hospitalCharges}}/-</p>
+            <p>{{bill.otherCharges}}/-</p>
+        </td>
+        </tr>
+            <tr  *ngFor="let bill of bills">
+              <td>Total Amount</td>
+              <td></td>
+              <td>{{bill.totalAmount}}/-</td>
+            </tr>
+        <tr>
+        <button type="button" class="btn btn-danger">Pay Bill</button> &nbsp;
+        <button type="button" class="btn btn-info">Print</button> &nbsp;
+        <button type="button" (click) = "Back()" class="btn btn-dark">Back</button>   
+        <br>
+        <br>
+    </tr>
+      <!-- </tr> -->
+      
+    </table>
+    <app-footer></app-footer>
+  </div>
+  <app-footer></app-footer>
+  

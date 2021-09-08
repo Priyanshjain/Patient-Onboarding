@@ -1,0 +1,25 @@
+.btn1 {
+  cursor: pointer;
+  color: rgb(48, 207, 165);
+  font-size: 25px;
+  border-radius: 20px;
+  padding: 5px 20px;
+  outline: none;
+  margin: 10px;
+  font-weight: bold;
+  /* background-color: wheat; */
+  background: rgb(4, 74, 102);
+  border-color: rgb(71, 34, 34);
+  font-family: "Piedra", cursive;
+}
+.btn1:hover {
+  background-color: black;
+  text-decoration: underline;
+  color: green;
+  border-bottom: 7px solid green;
+  border-radius: 20px;
+}
+
+.ok {
+  background-color: lightsteelblue;
+}

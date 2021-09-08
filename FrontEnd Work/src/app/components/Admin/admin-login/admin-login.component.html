@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<font color = red size = 5px>
+    {{ errorMessage }}  </font>
+<div class="loginForm">
+    <div class="main">
+        <br><h1 style="color:black"><b>Admin Login Page</b></h1>
+        <div class="container">
+            <form novalidate [formGroup]="adminLoginForm" (ngSubmit)="adminLogin()">
+                <fieldset>
+                    <label style="color:black"><b>Login Id :</b></label>
+                    <div class="box">
+                        <i class="fa fa-user fa-lg"></i>
+                            <input type="number" name="adminId" id="adminId" placeholder="Entre Your id" formControlName="adminId">
+                            <div class="alert alert-danger" *ngIf="adminLoginForm.get('adminId').hasError('required') && adminLoginForm.get('adminId').dirty">
+                                Admin ID is Required
+                            </div>
+                        </div><br>
+                        <label style="color:black"><b>Password :</b></label>
+                       
+                        <div class="box">
+                            <i class="fa fa-key fa-lg"></i>
+                            <input type="password" name="password" id="password" placeholder="Entre Your Password" formControlName="password">
+                            <div class="alert alert-danger" *ngIf="adminLoginForm.get('password').hasError('required') && adminLoginForm.get('password').dirty">
+                                Password is Required
+                            </div>
+                        </div>
+                        <div class="btn-text-center">
+                            <button type="submit" class="btn btn-primary" [disabled]="!adminLoginForm.valid" (click) = "login()">Log-in</button> &nbsp;
+                                <button class="btn btn-warning" (click) = "sign_up()">Sign-Up</button> &nbsp;
+                                <button class="btn btn-danger" (click) = "forgetPassword()">Forget Password</button>&nbsp;
+                                <br><br>
+                                
+                                <button class="btn btn-dark" (click) = "back()">Back</button>&nbsp;
+                        </div>
+                </fieldset>
+                <br>
+
+            </form>
+        
+        </div>
+        
+        </div>
+
+</div>
+<app-footer></app-footer>
