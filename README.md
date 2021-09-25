@@ -29,3 +29,34 @@ To-do list:
 3. open front-end work in Angular and backend work in Eclips
 4. Run the Eclips project first to start the server 
 5. Then Run the front-end using (npm start)in VS code
+
+## Code scaffolding
+Run ng generate component component-name to generate a new component. You can also use ng generate directive|pipe|service|class|guard|interface|enum|module.
+
+## Build
+Run ng build to build the project. The build artifacts will be stored in the dist/ directory.
+
+## Test
+Run ng test to execute the unit tests via Karma.
+
+## Running end-to-end tests
+Run ng e2e to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+To get more help on the Angular CLI use ng help or go check out the Angular CLI Overview and Command Reference page.
+
+## Contributors
+* Lucky Dhiman
+* Ketan Shinde
+* Kafilur Rahman
+* Pooja Karri
+* Mulla Mohammad
+
+## Usage
+Patient Module can be used to Register a patient with this application for further use
+After Signing in a Patient wuld be able to book an appointment for the Consultant for his problem with Doctor
+Doctor Module will able to manage and deny the appiontment
+
+## License
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
