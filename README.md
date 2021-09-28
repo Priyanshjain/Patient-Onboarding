@@ -45,13 +45,6 @@ Run ng e2e to execute the end-to-end tests via a platform of your choice. To use
 ## Further help
 To get more help on the Angular CLI use ng help or go check out the Angular CLI Overview and Command Reference page.
 
-## Contributors
-* Lucky Dhiman
-* Ketan Shinde
-* Kafilur Rahman
-* Pooja Karri
-* Mulla Mohammad
-
 ## Usage
 Patient Module can be used to Register a patient with this application for further use
 After Signing in a Patient wuld be able to book an appointment for the Consultant for his problem with Doctor
