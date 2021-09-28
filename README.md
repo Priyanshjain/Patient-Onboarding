@@ -25,7 +25,7 @@ To-do list:
 
 ## Getting Started
 1. Start with this Github Repository
-2. Git clone to directory of your choice $ git clone https://github.com/ketan7705/Patient-Onboarding.git
+2. Git clone to directory of your choice $ git clone https://github.com/Priyanshjain/Patient-Onboarding.git
 3. open front-end work in Angular and backend work in Eclips
 4. Run the Eclips project first to start the server 
 5. Then Run the front-end using (npm start)in VS code
